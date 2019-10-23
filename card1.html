@@ -1,5 +1,6 @@
 <html>
   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card</title>
     <style>
       .card {
@@ -9,6 +10,9 @@
         padding: 2px 16px;
         padding-top: 20px;
         background-color: bisque;
+        position: fixed;
+        left: 40%;
+        top: 20%;
       }
 
       .card:hover {
@@ -26,20 +30,26 @@
         padding-top: 15px;
         font-weight: bold;
         font-size: 15;
+        position: relative;
+        left: 40%;
+        top: 20%;
       }
       .desgn {
         font-weight: normal !important;
+        padding-top: 10px;
+        padding-bottom: 5px;
+       
+
       }
     </style>
   </head>
   <body bgcolor="grey">
-    <center style="padding-top:  150px;">
       <div class="card">
         <img src="photo-1497316730643-415fac54a2af.jpeg" alt="img" />
         <div class="container">
           <div class="title">
             ABCD
-            <p class="desgn">Engineer</p>
+            <div class="desgn">Engineer</div>
           </div>
         </div>
       </div>
