@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Forms</title>
+    <style>
+      body {
+        background-color: grey;
+      }
+      .details {
+        background-color: bisque;
+        border-radius: 20px;
+        width: 20%;
+        height: 20%;
+        padding: 50px;
+      }
+      input,
+      textarea,
+      select,
+      option {
+        border-radius: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="details">
+      <form>
+        <label>Name:</label><input type="text" name="Name" /><br />
+        <label>Gender:</label><br />
+        <input type="radio" name="gender" value="male" />Male<br />
+        <input type="radio" name="gender" value="female" />Female<br />
+        <label>Hobbies:</label>
+        <select>
+          <option value="1">Playing</option>
+          <option value="2">TV</option>
+          <option value="3">Reading</option> </select
+        ><br />
+        <label>Description:</label><br />
+        <textarea name="desc"></textarea><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
