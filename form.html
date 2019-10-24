@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    input[type="text"],
+    input[type="email"],
+    #txt,
+    select {
+      width: 30%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      width: 30%;
+      background-color: #4caf50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+    div {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+  </style>
+  <body></body>
+    <div class="frm">
+      <form onsubmit="return validateform()">
+        <label for="fname">First Name</label>
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Your name.."
+          required
+        />
+        <br />
+        <label for="lname">Last Name</label>
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Your last name.."
+          required
+        />
+        <br />
+        <label for="email">Email</label>
+        <input
+          type="text"
+          id="email"
+          name="lastname"
+          placeholder="Your Email.."
+          required
+        />
+        <br />
+        <label for="phone">Phone</label>
+        <input
+          type="text"
+          id="phone"
+          name="lastname"
+          placeholder="Your Phone number.."
+          required
+        />
+        <br />
+
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+        <br />
+        <label for="desc">Description</label>
+        <textarea id="txt" placeholder="Your Description.."> </textarea>
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <script>
+      function validateform() {
+        var a = document.getElementById("phone").value;
+        var e = document.getElementById("email").value;
+        var f = document.getElementById("fname").value;
+        var l = document.getElementById("lname").value;
+
+        if (/\d/.test(f) || /\d/.test(l)) {
+          alert("Name cannot have number");
+          return false;
+        }
+        if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(e)) {
+          alert("invalid email");
+          return false;
+        } else if (a[0] == "6" || a[0] == "7" || a[0] == "8" || a[0] == "9") {
+        } else {
+          alert("Enter the valid number");
+          return false;
+        }
+        if (a.length < 10) {
+          alert("Less than 10 digits in phone number");
+          return false;
+        } else if (a.length > 10) {
+          alert("greater than 10 digits in phone number");
+          return false;
+        } else if (isNaN(a)) {
+          alert("Not a number");
+          return false;
+        } else {
+          alert("Thank you");
+          return true;
+        }
+      }
+    </script>
+  </body>
+</html>
